@@ -1,0 +1,29 @@
+<marquee direction="right" height="50px" scrollamount=10">
+    <h1>WELCOME TO THE STATE-OF THE ART WORD COUNTER</h1>
+</marquee>
+<marquee direction="right" height="50px" scrollamount=15">
+    <h1>WELCOME TO THE STATE-OF THE ART WORD COUNTER</h1>
+</marquee>
+<marquee direction="right" height="50px" scrollamount=20">
+    <h1>WELCOME TO THE STATE-OF THE ART WORD COUNTER</h1>
+</marquee>
+<marquee direction="right" height="50px" scrollamount=10">
+    <h1>WELCOME TO THE STATE-OF THE ART WORD COUNTER</h1>
+</marquee>
+<marquee direction="right" height="50px" scrollamount=10">
+    <h1>WELCOME TO THE STATE-OF THE ART WORD COUNTER</h1>
+</marquee>
+<br><br><br>
+<div align="center">
+    <a href="{% url 'about' %}">About</a>
+</div>
+<br><br><br>
+
+<div align="center">
+    <form action="{% url 'results' %}" method="post">
+        {% csrf_token %}
+        <textarea cols="100" rows="20" name="text" placeholder="Enter text here"></textarea>
+        <br><br>
+        <button type="submit">COUNT!</button>
+    </form>
+</div>

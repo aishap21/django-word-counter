@@ -1,0 +1,13 @@
+<div align="center">
+    <h1><u>WORD COUNT RESULTS</u></h1>
+    <br>
+    <h3><em>There are {{ length }} words in the given input</em></h3>
+    <a href="{% url 'home' %} "><b>Start Again</b></a><br><br><br>
+    <h3><u>Text Input:</u></h3><br>
+    {{ text }}
+    <br><br><br>
+    <h3><u>Word Count:</u></h3><br>
+    {% for word, cnt in freq %}
+        <b>{{ word }}</b>&nbsp;&nbsp;->&nbsp;&nbsp;{{ cnt }}<br>
+    {% endfor %}
+</div>
